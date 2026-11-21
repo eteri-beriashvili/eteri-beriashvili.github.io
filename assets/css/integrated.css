@@ -1,0 +1,224 @@
+/* Eteri v7: only layout integration; original article CSS is shared/deduplicated in assets/css/articles/ */
+.imported-article-shell{padding-bottom:28px;min-width:0}
+.imported-article-shell .eb-article{margin-top:0;margin-bottom:24px;max-width:1060px}
+.imported-article-shell .eb-article a{overflow-wrap:break-word}
+.school-catalog-first{padding:16px 0 28px;margin:20px 0 32px;border-bottom:2px solid #ffd8aa}
+.school-catalog-first h2{margin:8px 0 10px;color:#a64e00}
+.school-catalog-first .source-note{margin-bottom:16px}
+.school-catalog-first .school-courses{margin-top:14px}
+.school-catalog-first .extra-panels{margin-top:18px}
+.school-catalog-actions{margin:18px 0 4px}
+@media(max-width:720px){.imported-article-shell{padding-left:0;padding-right:0}.imported-article-shell .eb-article{border-radius:0;margin-bottom:0}.school-catalog-first{padding-left:4px;padding-right:4px}}
+
+/* v6: reusable gallery counts; use on any page */
+.gallery-square--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery-square--three{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery-square--three figure:last-child{grid-column:1/-1}
+.gallery-square--three figure:last-child img{max-width:100%;width:100%}
+/* v6: single image can preserve natural ratio or have an explicit crop */
+.photo--natural img{aspect-ratio:auto!important;object-fit:contain!important;width:auto;max-width:100%;height:auto;max-height:none}
+.photo--landscape img{aspect-ratio:16/9!important;object-fit:cover!important;width:100%;max-height:none}
+.photo--portrait img{aspect-ratio:3/4!important;object-fit:cover!important;width:min(100%,560px);max-height:none}
+.photo--square img{aspect-ratio:1/1!important;object-fit:cover!important;width:min(100%,680px);max-height:none}
+@media(min-width:640px){.gallery-square--three{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery-square--three figure:last-child{grid-column:auto}}
+
+
+/* v9: contrast fixes, centered photos, and stable 2-photo galleries */
+.btn--orange,.btn--orange:hover,.btn--orange:focus-visible{color:#fff!important}
+.banner{color:#fff}
+.banner:hover{color:#fff}
+.banner__sub{color:rgba(255,255,255,.96)}
+.banner__icon{background:rgba(255,255,255,.16)}
+.photo,.photo--natural,.photo--landscape,.photo--portrait,.photo--square{margin-left:auto;margin-right:auto}
+.photo img,.photo--natural img,.photo--landscape img,.photo--portrait img,.photo--square img{margin-inline:auto}
+.gallery-square img,.eb-photo-grid img{object-position:center center!important}
+.gallery-square figure,.eb-photo-grid figure{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+.gallery-square figcaption,.eb-photo-grid figcaption{max-width:100%}
+.gallery-square--two{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.eb-photo-grid.gallery-square--two{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px;align-items:start;max-width:100%;margin-inline:auto}
+.eb-photo-grid.gallery-square--two figure{max-width:none!important;grid-column:auto!important}
+.eb-photo-grid.gallery-square--two figure:last-child{grid-column:auto!important;max-width:none!important}
+.eb-photo-grid.gallery-square--two img{width:100%;aspect-ratio:1/1;object-fit:cover}
+@media(max-width:720px){.eb-photo-grid.gallery-square--two{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:480px){.gallery-square--two{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eb-photo-grid.gallery-square--two{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eb-photo-grid.gallery-square--two figure:last-child{grid-column:auto!important;max-width:none!important}}
+.demo-stat-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:18px 0}
+.demo-stat-card{padding:18px 16px;border:1px solid #cfe3e0;border-radius:16px;background:#f7fcfb}
+.demo-stat-card strong{display:block;font-size:2rem;line-height:1;color:#13686e;margin-bottom:8px}
+.demo-step-list{list-style:none;padding:0;margin:18px 0;display:grid;gap:12px}
+.demo-step-list li{position:relative;padding:14px 14px 14px 54px;border:1px solid #dbe7e4;border-radius:14px;background:#fcfefe}
+.demo-step-list li::before{content:attr(data-step);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#12666c;color:#fff;font-weight:800}
+.demo-icon-list{list-style:none;padding:0;margin:18px 0;display:grid;gap:12px}
+.demo-icon-list li{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid #dbe7e4;border-radius:14px;background:#fff}
+.demo-icon-list li .icon{color:#12666c;flex:none;margin-top:2px}
+
+
+/* KIT v3: адаптивные видео без внутренних полос прокрутки. */
+.eb-article .eb-video{
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:900px;
+  height:auto;
+  aspect-ratio:16/9;
+  margin:22px auto;
+  overflow:hidden;
+  border-radius:15px;
+  background:#10252d;
+  isolation:isolate;
+}
+.eb-article .eb-video iframe,
+.eb-article .eb-video video{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:100%!important;
+  border:0;
+  margin:0;
+}
+.eb-article .eb-video iframe{overflow:hidden}
+.video-grid{
+  display:grid;
+  gap:16px;
+  width:100%;
+  max-width:1100px;
+  margin:24px auto;
+  align-items:start;
+}
+.video-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.video-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.video-grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.video-grid--2x2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.video-grid .video-item{min-width:0;width:100%;margin:0}
+.video-grid .video-item video{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:#171717;
+  border-radius:12px;
+}
+.video-grid .video-item figcaption,
+.video-grid .video-item>p{
+  margin:8px 0 0;
+  text-align:left;
+}
+@media(max-width:850px){
+  .video-grid--3,.video-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .video-grid--2,.video-grid--3,.video-grid--4,.video-grid--2x2{grid-template-columns:1fr}
+  .video-grid{gap:18px;margin:18px auto}
+  .eb-article .eb-video{width:100%;max-width:100%;margin:18px auto}
+}
+
+
+/* KIT v3: фотография цитаты немного выше текстового блока, подпись сразу под цитатой слева. */
+.quote-photo{
+  display:grid;
+  grid-template-columns:130px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  gap:10px 22px;
+  align-items:center;
+  max-width:900px;
+  margin:24px auto;
+}
+.quote-photo>img{
+  grid-column:1;
+  grid-row:1/3;
+  display:block;
+  width:130px;
+  height:130px;
+  aspect-ratio:1/1;
+  max-width:130px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:14px;
+  align-self:stretch;
+}
+.quote-photo>blockquote{
+  grid-column:2;
+  grid-row:1;
+  max-width:560px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  text-align:left;
+}
+.quote-photo>blockquote p{margin:0;text-align:left}
+.quote-photo>figcaption{
+  grid-column:2;
+  grid-row:2;
+  justify-self:start;
+  margin:0;
+  text-align:left;
+  font-weight:700;
+}
+@media(max-width:640px){
+  .quote-photo{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto auto;
+    row-gap:0;
+    column-gap:0;
+    justify-items:stretch;
+    width:100%;
+    max-width:100%;
+  }
+  .quote-photo>img{
+    grid-column:1;
+    grid-row:1;
+    justify-self:center;
+    width:130px;
+    height:130px;
+    min-width:130px;
+    max-width:130px;
+    min-height:130px;
+    max-height:130px;
+    margin:0 auto 14px;
+  }
+  .quote-photo>blockquote{
+    grid-column:1;
+    grid-row:2;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    margin:0;
+    padding:18px 21px 8px;
+    border:0;
+    border-left:4px solid #FF7800;
+    border-radius:12px 12px 0 0;
+    background:#fff7ed;
+    text-align:left;
+  }
+  .quote-photo>blockquote p{
+    width:100%;
+    max-width:none;
+    margin:0;
+    text-align:left;
+  }
+  .quote-photo>figcaption{
+    grid-column:1;
+    grid-row:3;
+    width:100%;
+    margin:0;
+    padding:0 21px 18px;
+    border-left:4px solid #FF7800;
+    border-radius:0 0 12px 12px;
+    background:#fff7ed;
+    color:var(--muted);
+    font-size:.82rem;
+    font-weight:400;
+    text-align:left;
+  }
+}
+
+
+/* KIT v3: без лишнего пустого поля между статьёй и подвалом. */
+.imported-article-shell{padding-top:0!important;padding-bottom:0!important}
+.imported-article-shell .eb-article{margin-top:0!important;margin-bottom:0!important}

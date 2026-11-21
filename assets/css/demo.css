@@ -1,0 +1,40 @@
+/* v5 — оформление страницы с образцами; сами блоки стилизуются в site.css. */
+.demo-intro{padding:20px 0 4px}
+.demo-intro h1{font-size:clamp(2rem,5.5vw,3.2rem)}
+.demo-intro p{max-width:760px;color:var(--muted)}
+.demo-banner-stack{display:grid;gap:13px}
+.demo-index{display:flex;flex-wrap:wrap;gap:7px;padding:15px;margin:20px 0 30px;border:1px solid var(--border);border-radius:16px;background:#fffaf4}
+.demo-index a{display:inline-block;padding:7px 10px;font-size:.83rem;text-decoration:none;border:1px solid #eed5b8;border-radius:9px;background:white;font-weight:650}
+.demo-unit{border:1px solid var(--border);border-radius:19px;background:white;margin:0 0 24px;min-width:0;overflow:hidden;scroll-margin-top:155px}
+.demo-unit__intro{padding:19px 20px 10px}
+.demo-unit__intro h2{font-size:clamp(1.3rem,3vw,1.65rem);margin:0 0 6px}
+.demo-unit__intro p{margin:0;color:var(--muted);font-size:.9rem}
+.demo-preview{padding:17px 20px 22px;min-width:0;overflow-wrap:anywhere}
+.demo-preview> :last-child{margin-bottom:0}
+.demo-source{border-top:1px solid #e8d8cb;background:#241f1c;color:#f5e7db;min-width:0}
+.demo-source__head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:space-between;padding:10px 15px;background:#342a25;color:#f8dfc2;font-size:.8rem}
+.demo-source__head button{border:1px solid #ebaa6a;background:#ff7800;color:white;border-radius:9px;padding:8px 12px;min-height:39px;font-weight:800;font-size:.84rem}
+.demo-source__head button:hover{background:#c75c00}
+.demo-source pre{white-space:pre;tab-size:2;overflow:auto;max-height:300px;padding:18px;margin:0;line-height:1.5;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;color:#f2e7dd}
+.demo-source code{font:inherit}
+.demo-meta-note{font-size:.83rem;padding:11px 13px;border-radius:10px;background:#eaf7f6;color:#145257;margin:10px 0}
+.demo-svg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.demo-svg-tile{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-radius:12px;padding:11px;font-size:.85rem}
+.demo-svg-tile img{width:36px;height:36px}
+.demo-svg-tile span{overflow-wrap:anywhere}
+.demo-actions{display:flex;flex-wrap:wrap;gap:9px}
+.demo-twophoto{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;align-items:start}
+.demo-twophoto figure{margin:0;min-width:0}
+.demo-twophoto img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:13px}
+.demo-twophoto figcaption{font-size:.82rem;color:var(--muted);margin:5px 0}
+.demo-example-table{max-width:100%}
+.demo-example-table table{min-width:0}
+.demo-markdown-note{font-size:.82rem;color:#8b5b31}
+@media(min-width:700px){.demo-intro{padding:25px 0}.demo-unit__intro{padding:22px 26px 8px}.demo-preview{padding:20px 26px 27px}.demo-svg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:420px){.demo-unit__intro,.demo-preview{padding-left:13px;padding-right:13px}.demo-twophoto{grid-template-columns:1fr}.demo-source pre{font-size:11px;padding:14px}.demo-example-table table{min-width:440px}}
+
+
+/* v9: /demo gallery and preview improvements */
+.demo-twophoto{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.demo-twophoto img{object-position:center center}
+@media(max-width:420px){.demo-twophoto{grid-template-columns:repeat(2,minmax(0,1fr))!important}}

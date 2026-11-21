@@ -1,0 +1,64 @@
+/* Статья-образец: стили извлечены из файла пользователя. */
+
+    
+    
+    
+    .eb-article{--eb-ink:#202c35;--eb-muted:#62717d;--eb-teal:#116b70;--eb-gold:#bd8532;--eb-line:#dde6e9;--eb-surface:#fff;max-width:1040px;margin:28px auto 64px;padding:clamp(20px,4vw,52px);border:1px solid #e9edef;border-radius:24px;background:var(--eb-surface);box-shadow:0 16px 50px rgba(24,52,63,.06);font-size:16px}
+    .eb-article :where(h1,h2,h3,h4){color:#163941;line-height:1.23;letter-spacing:-.025em;scroll-margin-top:24px}
+    .eb-article h1{font-size:clamp(30px,4.6vw,48px);margin:10px 0 17px}
+    .eb-article h2{font-size:clamp(24px,3vw,30px);margin:48px 0 18px;padding-top:5px}
+    .eb-article h3{font-size:21px;margin:26px 0 11px}
+    .eb-article h4{font-size:17px;margin:19px 0 8px}
+    .eb-article p{margin:12px 0 16px}.eb-article a{color:var(--eb-teal);text-decoration:underline;text-underline-offset:3px}.eb-article a:hover{color:#0c5156}
+    .eb-article .eb-eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--eb-teal);font-size:12px;font-weight:750}
+    .eb-article .eb-lead{font-size:clamp(17px,2vw,20px);color:#40545d;max-width:800px}
+    .eb-article .eb-small{font-size:13px;color:var(--eb-muted)}
+    .eb-article .eb-toc{margin-top:24px;padding:19px 22px;background:#f1f6f7;border-radius:14px;border:1px solid #d9e9ea}
+    .eb-article .eb-toc strong{display:block;margin-bottom:6px;color:var(--eb-ink)}
+    .eb-article .eb-toc ul{display:flex;gap:8px 22px;flex-wrap:wrap;list-style:none;padding:0;margin:0}.eb-article .eb-toc li{margin:2px 0}
+    .eb-article .eb-facts{margin:21px 0 28px;padding:22px;background:linear-gradient(125deg,#eef8f7 0%,#f8fcfa 100%);border:1px solid #cfe9e4;border-left:5px solid var(--eb-teal);border-radius:14px}
+    .eb-article .eb-facts h2{font-size:23px;margin:0 0 8px;padding:0}
+    .eb-article .eb-facts ul{margin:8px 0 0;padding-left:22px}.eb-article li{margin:7px 0}
+    .eb-article figure{margin:20px 0 26px}.eb-article img{width:100%;height:auto;display:block;object-fit:cover;border-radius:12px}
+    .eb-article figcaption{margin-top:8px;font-size:13px;color:var(--eb-muted)}
+    .eb-article .eb-hero{max-width:760px}.eb-article .eb-hero img{aspect-ratio:16/10;object-position:center 25%}
+    .eb-article .eb-photogrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+    .eb-article .eb-photogrid img{aspect-ratio:4/5;object-position:center top}
+    .eb-article .eb-photogrid figure:nth-child(2) img{aspect-ratio:4/5}
+    .eb-article .eb-photogrid figure{margin:0}
+    .eb-article .eb-callout{display:flex;gap:13px;border-radius:14px;padding:17px 19px;margin:23px 0;border:1px solid}
+    .eb-article .eb-callout svg{width:21px;height:21px;flex:none;margin-top:2px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .eb-article .eb-callout > div > p{margin:4px 0 0}.eb-article .eb-callout strong{display:block}
+    .eb-article .eb-callout--gold{color:#764a13;background:#fff8e9;border-color:#efd5a1}
+    .eb-article .eb-callout--blue{color:#225b76;background:#eef7fc;border-color:#baddec}
+    .eb-article .eb-scroll-table{overflow-x:auto;border:1px solid var(--eb-line);border-radius:14px;margin:19px 0 26px}
+    .eb-article table{width:100%;border-collapse:collapse;font-size:15px;min-width:550px}
+    .eb-article th,.eb-article td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--eb-line);vertical-align:top}
+    .eb-article th{font-weight:700;background:#f0f6f7;color:#193e47}
+    .eb-article tr:last-child td{border-bottom:0}
+    .eb-article blockquote{margin:22px 0;padding:22px 26px;border-left:4px solid var(--eb-gold);border-radius:0 12px 12px 0;background:#faf8f4;font-size:19px;line-height:1.5}
+    .eb-article blockquote footer{font-size:13px;color:#756c64;margin-top:10px}
+    .eb-article .eb-tabs{margin:22px 0;border:1px solid var(--eb-line);border-radius:15px;overflow:hidden}
+    .eb-article [role="tablist"]{display:flex;flex-wrap:wrap;gap:2px;padding:9px;background:#f0f5f5;border-bottom:1px solid var(--eb-line)}
+    .eb-article [role="tab"]{background:transparent;border:0;border-radius:9px;color:#405960;font-family:inherit;font-size:14px;font-weight:600;line-height:1.3;cursor:pointer;padding:10px 14px}
+    .eb-article [role="tab"][aria-selected="true"]{background:#fff;color:var(--eb-teal);box-shadow:0 2px 8px rgba(20,52,62,.09)}
+    .eb-article [role="tab"]:focus-visible{outline:2px solid var(--eb-teal);outline-offset:2px}
+    .eb-article [role="tabpanel"]{padding:19px 24px}.eb-article [role="tabpanel"][hidden]{display:none}
+    .eb-article .eb-faq details{margin:10px 0;border:1px solid #dce6e8;border-radius:12px;overflow:hidden}
+    .eb-article .eb-faq summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 19px;list-style:none;font-weight:650;color:#16414a}
+    .eb-article .eb-faq summary::-webkit-details-marker{display:none}
+    .eb-article .eb-faq summary::after{content:'+';font-size:25px;font-weight:300;color:var(--eb-teal);line-height:1}
+    .eb-article .eb-faq details[open] summary::after{content:'−'}
+    .eb-article .eb-faq details>div{padding:0 19px 17px}.eb-article .eb-faq h3{font:inherit;color:inherit;margin:0}
+    .eb-article .eb-video{margin:21px 0;aspect-ratio:16/9;background:#10252d;border-radius:15px;overflow:hidden}
+    .eb-article .eb-video iframe{width:100%;height:100%;border:0}
+    .eb-article .eb-related{margin-top:41px;padding:23px;background:#f5f7f8;border:1px solid #e2e8eb;border-radius:16px}
+    .eb-article .eb-related h2{font-size:22px;margin:0 0 9px;padding:0}
+    .eb-article .eb-related ul{margin:0;padding-left:20px}
+    .eb-article .eb-license{font-size:12px;line-height:1.6;color:#74818a;margin-top:33px;border-top:1px solid var(--eb-line);padding-top:18px}
+    @media(max-width:720px){.eb-article{margin:0;box-shadow:none;border:0;border-radius:0;padding:20px}.eb-article .eb-photogrid{grid-template-columns:1fr 1fr}.eb-article .eb-photogrid figure:last-child{grid-column:1/-1;max-width:55%}.eb-article [role="tab"]{flex:1 1 110px}}
+    @media(max-width:480px){.eb-article .eb-photogrid{grid-template-columns:1fr}.eb-article .eb-photogrid figure:last-child{max-width:100%}.eb-article .eb-callout{padding:13px}.eb-article .eb-toc ul{display:block}}
+  
+/* Согласование с общей палитрой проекта. */
+.eb-article{--eb-teal:#015C65;--eb-gold:#BF7330}
+.eb-article .eb-video .video-cover{width:100%;height:100%}
